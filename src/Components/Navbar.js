@@ -15,7 +15,7 @@ const Navbar = () => {
     >
       <Box>
         <Image
-          src="https://i.pinimg.com/236x/91/b0/fb/91b0fbac6a10ed9bc7b9596ce89cf8b0.jpg"
+          src="https://image.pitchbook.com/zvmweLruf7H3H5ofy1ppunth1Wx1634111865055_200x200"
           alt="Logo"
           w={14}
           h={14}
