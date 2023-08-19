@@ -6,7 +6,7 @@ import {
   VStack,
   Circle,
   Heading,
-  Image,
+
 } from "@chakra-ui/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -58,10 +58,12 @@ const Improvement = () => {
             </Text>
             <Heading data-aos="fade-up">Self-improvement. Ugh.</Heading>
           </Box>
-          <Image
+          <img
             data-aos="fade-left"
-            w={"200px"}
+            width={200}
+            height={200}
             src="https://i.pinimg.com/originals/19/e9/01/19e9016cd1b0d385ddfa2d9e9672e02e.gif"
+            alt="alternative"
           />
         </Flex>
       </Box>

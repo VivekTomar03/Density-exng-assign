@@ -7,6 +7,8 @@ import IQ from "@/Components/IQ";
 import CardsSlide from "@/Components/CardsSlide";
 import MeetSeaction from "@/Components/MeetSeaction";
 import Improvement from "@/Components/Improvement";
+import EQ from "@/Components/EQ";
+import Anonymonous from "@/Components/Anonymonous";
 
 export default function Home() {
 
@@ -19,6 +21,8 @@ export default function Home() {
    <CardsSlide/>
    <MeetSeaction/>
    <Improvement/>
+   <EQ/>
+   <Anonymonous/>
    </>
   );
 }
