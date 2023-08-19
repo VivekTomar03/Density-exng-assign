@@ -4,7 +4,7 @@ const Banner = () => {
   return (
     <div
       style={{
-        backgroundImage: "url(https://i.pinimg.com/564x/c6/57/fc/c657fc5a6210964b2003eb28ec02d757.jpg)",
+        backgroundImage: "url(https://previews.123rf.com/images/shyrokova/shyrokova1910/shyrokova191000024/132364904-halloween-gingerbread-on-light-blue-background-cute-pumpkin-and-ghost-shaped-treats-homemade.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "400px",
@@ -120,7 +120,7 @@ const Banner = () => {
           }}
         >
           <img
-            src="https://i.pinimg.com/564x/ee/69/fb/ee69fb0a11cfa59bfe1d8c6960a19ab8.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGeTdvUxaoClQjP4Ilf6NJXyZb7XfLZ7hcm8zCHOC0qNvB4zS829iV-2rYcSKVrk2bue4&usqp=CAU"
             alt="Mobile"
             style={{
               width: "300px",

@@ -12,6 +12,7 @@ import Anonymonous from "@/Components/Anonymonous";
 import Started from "@/Components/Started";
 import WorkAhead from "@/Components/WorkAhead";
 import OpenVancencies from "@/Components/OpenVancencies";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
 
@@ -29,6 +30,7 @@ export default function Home() {
    <Started/>
    <WorkAhead/>
    <OpenVancencies/>
+   <Footer/>
    </>
   );
 }
