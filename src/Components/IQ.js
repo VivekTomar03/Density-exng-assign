@@ -6,10 +6,10 @@ import { Box, Container, Flex, Heading } from "@chakra-ui/react";
 const IQ = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration in milliseconds
+      duration: 1000,
       
-      mirror: false, // Whether elements should animate out while scrolling up
-      easing: "ease-out", // Easing function for animations
+      mirror: false, 
+      easing: "ease-out", 
     });
   }, []);
 
