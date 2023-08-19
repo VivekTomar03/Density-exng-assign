@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Box, Card, Flex, Heading, Image, Text } from '@chakra-ui/react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import "../app/globals.css"
 const CardsSlide = () => {
+  const sliderRef = useRef(null);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -11,7 +13,29 @@ const CardsSlide = () => {
       mirror: false,
       easing: 'ease-out',
     });
+
+    const intervalId = setInterval(handleSliderMove, 1500); 
+
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
+
+  
+  const handleSliderMove = () => {
+    if (sliderRef.current) {
+      const firstCard = sliderRef.current.querySelector('.slide-card');
+      sliderRef.current.style.transition = 'transform 0.3s ease-in-out';
+      sliderRef.current.style.transform = `translateX(-${firstCard.offsetWidth}px)`;
+      setTimeout(() => {
+        sliderRef.current.style.transition = 'none';
+        sliderRef.current.style.transform = 'translateX(0)';
+        const firstClone = sliderRef.current.querySelector('.slide-card').cloneNode(true);
+        sliderRef.current.appendChild(firstClone);
+        sliderRef.current.removeChild(sliderRef.current.querySelector('.slide-card'));
+      }, 300);
+    }
+  };
 
   return (
     <Box w={'90%'} m={'auto'} mt={'100px'}>
@@ -27,8 +51,8 @@ const CardsSlide = () => {
         />
       </Flex>
 
-      <Flex justifyItems="center" gap="30px" mt="40px">
-        <Card data-aos="flip-left" className="slide-card" bgColor="#D8F2FF">
+      <Flex className="slider" ref={sliderRef} mt="40px" p={10}>
+      <Card data-aos="flip-left" className="slide-card" bgColor="#D8F2FF">
           <Text fontSize="2xl">😅</Text>
           <Text fontWeight="bold" fontSize="xl">
             Quibble with your partner
@@ -70,6 +94,7 @@ const CardsSlide = () => {
           </Text>
         </Card>
       </Flex>
+     
     </Box>
   );
 };
