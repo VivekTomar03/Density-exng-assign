@@ -9,7 +9,7 @@ const Banner = () => {
         backgroundPosition: "center",
         height: "400px",
         position: "relative",
-        width: "70%",
+        width: "90%",
         margin: "auto",
       }}
     >

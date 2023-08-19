@@ -1,0 +1,22 @@
+
+  
+  .slide-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px; /* Adjust the width to your preference */
+    height: auto; /* Adjust the height to your preference */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tilted-card {
+    transform: rotate(-10deg);
+    color: #fff;
+  }
+  
+  .slide-card:hover {
+    transform: translateY(-5px);
+  }
+  
