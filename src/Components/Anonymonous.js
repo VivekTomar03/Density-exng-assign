@@ -65,7 +65,9 @@ const Anonymonous = () => {
           }
           bg="white"
           p={90}
+          w={"fit-content"}
           display="flex"
+          paddingLeft={2}
         >
           <Box position="relative" mx={2}>
             <Button

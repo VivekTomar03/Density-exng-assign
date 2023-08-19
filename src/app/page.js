@@ -9,6 +9,7 @@ import MeetSeaction from "@/Components/MeetSeaction";
 import Improvement from "@/Components/Improvement";
 import EQ from "@/Components/EQ";
 import Anonymonous from "@/Components/Anonymonous";
+import Started from "@/Components/Started";
 
 export default function Home() {
 
@@ -23,6 +24,7 @@ export default function Home() {
    <Improvement/>
    <EQ/>
    <Anonymonous/>
+   <Started/>
    </>
   );
 }
