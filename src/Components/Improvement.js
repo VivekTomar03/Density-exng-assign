@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import "../app/globals.css"
 const Improvement = () => {
   useEffect(() => {
     AOS.init({
@@ -70,9 +70,9 @@ const Improvement = () => {
 
       <VStack
         data-aos="fade-up"
-        
-        style={{ overflowX: "hidden", height: "400px" , }}
-        _hover={{overflowY:"scroll"}}
+        className="scrolling1"
+       
+        overflowY={"scroll"}
         h={"400px"}
         mr={5}
         spacing={4}
