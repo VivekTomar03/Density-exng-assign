@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     Box,
     Container,
@@ -12,12 +12,19 @@ import {
     Center,
 } from '@chakra-ui/react';
 import { FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Footer() {
-    return (
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            mirror: false,
+            easing: 'ease-out',
+        });
+    }, []);
 
+    return (
         <Box
             w={"90%"}
             m={"auto"}
@@ -25,14 +32,14 @@ export default function Footer() {
             bg={'white'}
             color={useColorModeValue('gray.700', 'gray.200')}
         >
-            <Box borderTopWidth={2}
+            <Box
+                borderTopWidth={2}
                 borderStyle={'solid'}
-                borderColor={useColorModeValue('gray.200', 'gray.700')}>
-
-            </Box>
+                borderColor={useColorModeValue('gray.200', 'gray.700')}
+            ></Box>
             <Container as={Stack} maxW={'6xl'} py={10}>
                 <SimpleGrid columns={1} spacing={8}>
-                    <Stack align={'center'} justify={'center'}>
+                    <Stack align={'center'} justify={'center'} data-aos="fade-right">
                         <img
                             src="https://image.pitchbook.com/zvmweLruf7H3H5ofy1ppunth1Wx1634111865055_200x200"
                             alt="Centered Image"
@@ -43,7 +50,7 @@ export default function Footer() {
                         </Text>
                     </Stack>
 
-                    <Stack align={'center'}>
+                    <Stack align={'center'} data-aos="fade-up">
                         <Flex gap={6}>
                             <Stack direction="row" align="center" spacing={2}>
                                 <Box bg="#9af0d7" rounded="full" p={2}>
@@ -60,7 +67,7 @@ export default function Footer() {
                         </Flex>
                     </Stack>
 
-                    <Stack align={'center'}>
+                    <Stack align={'center'} data-aos="fade-left">
                         <img
                             src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSmMsqhDM_WkLOvrWRWk0ZkA2fhbFW1HFwRVaoYUZFxchYhn_s9"
                             alt="App Store Badge"
@@ -75,10 +82,8 @@ export default function Footer() {
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.700')}
             >
-                <Center
-                    py={4}
-                >
-                    <Text >© 2023 Ahead Apps. All rights reserved</Text>
+                <Center py={4} data-aos="zoom-in">
+                    <Text>© 2023 Ahead Apps. All rights reserved</Text>
                 </Center>
             </Box>
         </Box>
