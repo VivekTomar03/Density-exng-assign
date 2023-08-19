@@ -10,6 +10,7 @@ import Improvement from "@/Components/Improvement";
 import EQ from "@/Components/EQ";
 import Anonymonous from "@/Components/Anonymonous";
 import Started from "@/Components/Started";
+import WorkAhead from "@/Components/WorkAhead";
 
 export default function Home() {
 
@@ -25,6 +26,7 @@ export default function Home() {
    <EQ/>
    <Anonymonous/>
    <Started/>
+   <WorkAhead/>
    </>
   );
 }
