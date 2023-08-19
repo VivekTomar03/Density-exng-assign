@@ -11,6 +11,7 @@ import EQ from "@/Components/EQ";
 import Anonymonous from "@/Components/Anonymonous";
 import Started from "@/Components/Started";
 import WorkAhead from "@/Components/WorkAhead";
+import OpenVancencies from "@/Components/OpenVancencies";
 
 export default function Home() {
 
@@ -27,6 +28,7 @@ export default function Home() {
    <Anonymonous/>
    <Started/>
    <WorkAhead/>
+   <OpenVancencies/>
    </>
   );
 }
